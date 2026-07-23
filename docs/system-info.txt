@@ -1,0 +1,20 @@
+]633;E;echo "ASOW ROS2 Environment";2e214da1-4fbb-41ca-9ae6-5359e265bfd8]633;CASOW ROS2 Environment
+Generated: Thu Jul 23 06:44:34 AM UTC 2026
+
+[OS]
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.5 LTS
+Release:	22.04
+Codename:	jammy
+
+[Architecture]
+aarch64
+
+[Kernel]
+5.15.0-185-generic
+
+[Python]
+Python 3.10.12
+
+[ROS]
+ROS_DISTRO=humble

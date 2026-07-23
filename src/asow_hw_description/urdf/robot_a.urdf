@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="ROBOT_A">
+    <link name="base_link-v1">
+        <inertial>
+            <origin xyz="-3.596307012397224e-17 8.99076753099306e-18 0.047242270246655026" rpy="0.0 0.0 0.0" />
+            <mass value="15.881921947833751" />
+            <inertia ixx="0.02740389878447569" iyy="0.07377866036250164" izz="0.07503453392587439" ixy="-5.135190812746843e-33" iyz="1.0341286076480536e-18" ixz="-2.6983021339128172e-17" />
+        </inertial>
+        <visual name="base_link-v1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/base_link-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="base_gray">
+                <color rgba="0.35 0.35 0.35 1.0" />
+            </material>
+        </visual>
+        <collision name="base_link-v1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/base_link-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_L_1-v1">
+        <inertial>
+            <origin xyz="-0.05253571632269832 -0.0033336910462764503 0.02499999999999999" rpy="0.0 -0.0 0.0" />
+            <mass value="3.2736646506680445" />
+            <inertia ixx="0.0020400762789989143" iyy="0.0061380158115020705" izz="0.005276307678153347" ixy="-0.0003628132859911648" iyz="-7.734366831151867e-19" ixz="-2.5868058713368473e-18" />
+        </inertial>
+        <visual name="link_L_1-v1_visual">
+            <origin xyz="0.115 -0.025 0.025" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_1-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_1_red">
+                <color rgba="0.85 0.15 0.15 1.0" />
+            </material>
+        </visual>
+        <collision name="link_L_1-v1_collision">
+            <origin xyz="0.115 -0.025 0.025" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_1-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_L_2-v1">
+        <inertial>
+            <origin xyz="-0.09566069346579405 -0.007703627484511559 -0.0004539395052395708" rpy="0.0 -0.0 0.0" />
+            <mass value="3.118751651857192" />
+            <inertia ixx="0.0021196297328528913" iyy="0.01125088261813123" izz="0.010916497110448065" ixy="-0.0003282241890858453" iyz="6.047609300765807e-05" ixz="0.0003456377415323876" />
+        </inertial>
+        <visual name="link_L_2-v1_visual">
+            <origin xyz="0.19 0.0 0.0" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_2-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_2_orange">
+                <color rgba="0.95 0.45 0.05 1.0" />
+            </material>
+        </visual>
+        <collision name="link_L_2-v1_collision">
+            <origin xyz="0.19 0.0 0.0" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_2-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_L_3-v1">
+        <inertial>
+            <origin xyz="-0.06500000000000007 -0.0018839898977644368 0.005000000000000003" rpy="0.0 -0.0 0.0" />
+            <mass value="1.5722002984630519" />
+            <inertia ixx="0.001107428869243225" iyy="0.006098519565284705" izz="0.007179745096220214" ixy="8.673617379884035e-19" iyz="-6.776263578034403e-21" ixz="-1.734723475976807e-18" />
+        </inertial>
+        <visual name="link_L_3-v1_visual">
+            <origin xyz="0.32 0.0 -0.01" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_3-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_3_yellow">
+                <color rgba="0.90 0.75 0.10 1.0" />
+            </material>
+        </visual>
+        <collision name="link_L_3-v1_collision">
+            <origin xyz="0.32 0.0 -0.01" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_3-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_L_4-v1">
+        <inertial>
+            <origin xyz="7.105427357601002e-17 -0.0459726775744445 0.012234673457824552" rpy="0.0 -0.0 0.0" />
+            <mass value="4.459057900496437" />
+            <inertia ixx="0.00997852464126306" iyy="0.004449906070845611" izz="0.010991696365970749" ixy="0.0" iyz="-0.00041958244565231355" ixz="-1.3877787807814457e-17" />
+        </inertial>
+        <visual name="link_L_4-v1_visual">
+            <origin xyz="0.45 0.0 0.01" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_4-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_4_green">
+                <color rgba="0.15 0.65 0.25 1.0" />
+            </material>
+        </visual>
+        <collision name="link_L_4-v1_collision">
+            <origin xyz="0.45 0.0 0.01" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_4-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_L_5-v1">
+        <inertial>
+            <origin xyz="-0.00013481796103853583 -2.324318480288175e-15 0.01" rpy="0.0 -0.0 0.0" />
+            <mass value="1.236346146821069" />
+            <inertia ixx="0.0008119116187459158" iyy="0.00082035579316736" izz="0.0015498443354586278" ixy="-7.654105120296088e-17" iyz="1.7848833522296184e-19" ixz="-6.938893903907228e-18" />
+        </inertial>
+        <visual name="link_L_5-v1_visual">
+            <origin xyz="0.45 0.0 -0.1" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_5-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_5_blue">
+                <color rgba="0.10 0.35 0.85 1.0" />
+            </material>
+        </visual>
+        <collision name="link_L_5-v1_collision">
+            <origin xyz="0.45 0.0 -0.1" rpy="3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_L_5-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_R_1-v1">
+        <inertial>
+            <origin xyz="0.05253571632269829 -0.0033336910462764503 0.02499999999999999" rpy="0.0 -0.0 0.0" />
+            <mass value="3.2736646506680445" />
+            <inertia ixx="0.0020400762789989143" iyy="0.006138015811502084" izz="0.005276307678153347" ixy="0.00036281328599116307" iyz="-7.734366831151867e-19" ixz="-1.696914174013643e-18" />
+        </inertial>
+        <visual name="link_R_1-v1_visual">
+            <origin xyz="-0.115 -0.025 0.025" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_1-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_1_red">
+                <color rgba="0.85 0.15 0.15 1.0" />
+            </material>
+        </visual>
+        <collision name="link_R_1-v1_collision">
+            <origin xyz="-0.115 -0.025 0.025" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_1-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_R_2-v1">
+        <inertial>
+            <origin xyz="0.0956606934657939 -0.00770362748451158 -0.00045393950523957077" rpy="0.0 -0.0 0.0" />
+            <mass value="3.1187516518571923" />
+            <inertia ixx="0.0021196297328528856" iyy="0.011250882618131175" izz="0.01091649711044812" ixy="0.0003282241890858323" iyz="6.047609300765668e-05" ixz="-0.0003456377415324074" />
+        </inertial>
+        <visual name="link_R_2-v1_visual">
+            <origin xyz="-0.19 0.0 0.0" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_2-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_2_orange">
+                <color rgba="0.95 0.45 0.05 1.0" />
+            </material>
+        </visual>
+        <collision name="link_R_2-v1_collision">
+            <origin xyz="-0.19 0.0 0.0" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_2-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_R_3-v1">
+        <inertial>
+            <origin xyz="0.065 -0.0018839898977644368 0.005000000000000003" rpy="0.0 -0.0 0.0" />
+            <mass value="1.5722002984630519" />
+            <inertia ixx="0.0011074288692432236" iyy="0.006098519565284732" izz="0.007179745096220269" ixy="-8.673617379884035e-19" iyz="-6.776263578034403e-21" ixz="1.734723475976807e-18" />
+        </inertial>
+        <visual name="link_R_3-v1_visual">
+            <origin xyz="-0.32 0.0 -0.01" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_3-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_3_yellow">
+                <color rgba="0.90 0.75 0.10 1.0" />
+            </material>
+        </visual>
+        <collision name="link_R_3-v1_collision">
+            <origin xyz="-0.32 0.0 -0.01" rpy="1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_3-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_R_4-v1">
+        <inertial>
+            <origin xyz="-7.105427357601002e-17 -0.04597267757444448 0.012234673457824545" rpy="0.0 -0.0 0.0" />
+            <mass value="4.459057900496436" />
+            <inertia ixx="0.009978524641263063" iyy="0.004449906070845722" izz="0.01099169636597086" ixy="1.3877787807814457e-17" iyz="-0.000419582445652316" ixz="-4.336808689942018e-18" />
+        </inertial>
+        <visual name="link_R_4-v1_visual">
+            <origin xyz="-0.45 0.0 0.01" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_4-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_4_green">
+                <color rgba="0.15 0.65 0.25 1.0" />
+            </material>
+        </visual>
+        <collision name="link_R_4-v1_collision">
+            <origin xyz="-0.45 0.0 0.01" rpy="-1.5707963267948966 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_4-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_R_5-v1">
+        <inertial>
+            <origin xyz="0.0001609173746943071 5.050265971612702e-17 -0.009999999999999894" rpy="0.0 -0.0 0.0" />
+            <mass value="1.2369827189136964" />
+            <inertia ixx="0.0008119517471491654" iyy="0.0008220137985852638" izz="0.001551500031140074" ixy="9.91738499737329e-19" iyz="8.031975085032235e-19" ixz="-6.938893903907228e-18" />
+        </inertial>
+        <visual name="link_R_5-v1_visual">
+            <origin xyz="-0.45 0.0 0.1" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_5-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="pair_5_blue">
+                <color rgba="0.10 0.35 0.85 1.0" />
+            </material>
+        </visual>
+        <collision name="link_R_5-v1_collision">
+            <origin xyz="-0.45 0.0 0.1" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asow_hw_description/meshes/link_R_5-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_link-v1_linkL1" type="revolute">
+        <origin xyz="-0.115 0.025 0.025" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="base_link-v1" />
+        <child link="link_L_1-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="link_L_1-v1_linkL2" type="revolute">
+        <origin xyz="-0.075 -0.025 0.025" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="link_L_1-v1" />
+        <child link="link_L_2-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-1.745329" upper="1.745329" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="link_L_2-v1_linkL3" type="revolute">
+        <origin xyz="-0.13 0.01 0.0" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="link_L_2-v1" />
+        <child link="link_L_3-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="link_L_3-v1_linkL4" type="revolute">
+        <origin xyz="-0.13 0.0 0.0" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="link_L_3-v1" />
+        <child link="link_L_4-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="link_L_4-v1_linkL5" type="revolute">
+        <origin xyz="0.0 -0.1 0.01" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="link_L_4-v1" />
+        <child link="link_L_5-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-3.141593" upper="0.0" effort="1000000" velocity="1000000" />    
+    </joint>
+    <joint name="base_link-v1_linkR1" type="revolute">
+        <origin xyz="0.115 0.025 0.025" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="base_link-v1" />
+        <child link="link_R_1-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="link_R_1-v1_linkR2" type="revolute">
+        <origin xyz="0.075 -0.025 0.025" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="link_R_1-v1" />
+        <child link="link_R_2-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-1.745329" upper="1.745329" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="link_R_2-v1_linkR3" type="revolute">
+        <origin xyz="0.13 0.01 0.0" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="link_R_2-v1" />
+        <child link="link_R_3-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="link_R_3-v1_linkR4" type="revolute">
+        <origin xyz="0.13 0.0 0.0" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="link_R_3-v1" />
+        <child link="link_R_4-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="link_R_4-v1_linkR5" type="revolute">
+        <origin xyz="0.0 -0.1 0.01" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="link_R_4-v1" />
+        <child link="link_R_5-v1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit lower="-3.141593" upper="0.0" effort="1000000" velocity="1000000" />    
+    </joint>
+
+     <!-- Left arm tool reference frame -->
+    <link name="left_tool0" />
+
+    <joint name="left_tool0_joint" type="fixed">
+        <parent link="link_L_5-v1" />
+        <child link="left_tool0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <!-- Right arm tool reference frame -->
+    <link name="right_tool0" />
+
+    <joint name="right_tool0_joint" type="fixed">
+        <parent link="link_R_5-v1" />
+        <child link="right_tool0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+</robot>

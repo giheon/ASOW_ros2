@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: asow_hw_description
+    relative_path: urdf/robot_a.urdf
+  srdf:
+    relative_path: config/ROBOT_A.srdf
+  package_settings:
+    author_name: ASOW
+    author_email: ski100000@naver.com
+    generated_timestamp: 1783836827
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
