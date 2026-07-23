@@ -127,8 +127,6 @@ asow_moveit_config
 asow_gazebo
 ```
 
-초기 개발에 사용했던 `asow_description` 패키지는 현재 기준 패키지가 아니며 이 저장소의 공식 실행 구조에 포함하지 않는다.
-
 ---
 
 ## 4. ROS2 패키지
