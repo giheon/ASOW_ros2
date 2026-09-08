@@ -13,7 +13,7 @@ def generate_launch_description():
     urdf_path = os.path.join(
         package_share,
         "urdf",
-        "robot_a.urdf",
+        "asow_robot.urdf",
     )
 
     with open(urdf_path, "r", encoding="utf-8") as urdf_file:
