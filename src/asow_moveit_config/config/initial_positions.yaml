@@ -1,13 +1,13 @@
-# Default initial positions for ROBOT_A's ros2_control fake system
+# Default initial positions for ASOW's ros2_control fake system
 
 initial_positions:
-  base_link-v1_linkL1: 0
-  base_link-v1_linkR1: 0
-  link_L_1-v1_linkL2: 0
-  link_L_2-v1_linkL3: 0
-  link_L_3-v1_linkL4: 0
-  link_L_4-v1_linkL5: 0
-  link_R_1-v1_linkR2: 0
-  link_R_2-v1_linkR3: 0
-  link_R_3-v1_linkR4: 0
-  link_R_4-v1_linkR5: 0
+  left_joint1: 0
+  right_joint1: 0
+  left_joint2: 0
+  left_joint3: 0
+  left_joint4: 0
+  left_joint5: 0
+  right_joint2: 0
+  right_joint3: 0
+  right_joint4: 0
+  right_joint5: 0

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ASOW">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import ASOW urdf file -->
+    <xacro:include filename="$(find asow_hw_description)/urdf/asow_robot.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="ASOW.ros2_control.xacro" />
+
+
+    <xacro:ASOW_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

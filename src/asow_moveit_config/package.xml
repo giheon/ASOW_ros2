@@ -4,7 +4,7 @@
   <name>asow_moveit_config</name>
   <version>0.3.0</version>
   <description>
-     An automatically generated package with all the configuration and launch files for using the ROBOT_A with the MoveIt Motion Planning Framework
+     An automatically generated package with all the configuration and launch files for using the ASOW with the MoveIt Motion Planning Framework
   </description>
   <maintainer email="ski100000@naver.com">ASOW</maintainer>
 

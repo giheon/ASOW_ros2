@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:macro name="ROBOT_A_ros2_control" params="name initial_positions_file">
+    <xacro:macro name="ASOW_ros2_control" params="name initial_positions_file">
         <xacro:property name="initial_positions" value="${load_yaml(initial_positions_file)['initial_positions']}"/>
 
         <ros2_control name="${name}" type="system">
@@ -8,73 +8,73 @@
                 <!-- By default, set up controllers for simulation. This won't work on real hardware -->
                 <plugin>mock_components/GenericSystem</plugin>
             </hardware>
-            <joint name="base_link-v1_linkL1">
+            <joint name="left_joint1">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['base_link-v1_linkL1']}</param>
+                  <param name="initial_value">${initial_positions['left_joint1']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="link_L_1-v1_linkL2">
+            <joint name="left_joint2">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['link_L_1-v1_linkL2']}</param>
+                  <param name="initial_value">${initial_positions['left_joint2']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="link_L_2-v1_linkL3">
+            <joint name="left_joint3">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['link_L_2-v1_linkL3']}</param>
+                  <param name="initial_value">${initial_positions['left_joint3']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="link_L_3-v1_linkL4">
+            <joint name="left_joint4">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['link_L_3-v1_linkL4']}</param>
+                  <param name="initial_value">${initial_positions['left_joint4']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="link_L_4-v1_linkL5">
+            <joint name="left_joint5">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['link_L_4-v1_linkL5']}</param>
+                  <param name="initial_value">${initial_positions['left_joint5']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="base_link-v1_linkR1">
+            <joint name="right_joint1">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['base_link-v1_linkR1']}</param>
+                  <param name="initial_value">${initial_positions['right_joint1']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="link_R_1-v1_linkR2">
+            <joint name="right_joint2">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['link_R_1-v1_linkR2']}</param>
+                  <param name="initial_value">${initial_positions['right_joint2']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="link_R_2-v1_linkR3">
+            <joint name="right_joint3">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['link_R_2-v1_linkR3']}</param>
+                  <param name="initial_value">${initial_positions['right_joint3']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="link_R_3-v1_linkR4">
+            <joint name="right_joint4">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['link_R_3-v1_linkR4']}</param>
+                  <param name="initial_value">${initial_positions['right_joint4']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="link_R_4-v1_linkR5">
+            <joint name="right_joint5">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['link_R_4-v1_linkR5']}</param>
+                  <param name="initial_value">${initial_positions['right_joint5']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
