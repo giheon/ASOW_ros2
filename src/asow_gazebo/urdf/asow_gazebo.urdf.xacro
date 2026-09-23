@@ -1,24 +1,35 @@
 <?xml version="1.0"?>
 <robot
   xmlns:xacro="http://www.ros.org/wiki/xacro"
-  name="ROBOT_A">
+  name="ASOW">
 
-  <!-- HW팀 CAD 기반 양팔 URDF -->
+  <!--
+    Canonical final HW description.
+    Geometry / inertia / revolute joint definition의 Source of Truth는
+    asow_hw_description/urdf/asow_robot.urdf 이다.
+  -->
   <xacro:include
-    filename="$(find asow_hw_description)/urdf/robot_a.urdf"/>
+    filename="$(find asow_hw_description)/urdf/asow_robot.urdf"/>
 
-  <!-- Gazebo에서 중앙 몸체를 world에 고정 -->
+  <!--
+    Gazebo simulation에서 중앙 몸체를 world에 고정.
+    기존 simulation baseline의 높이 0.15 m 유지.
+  -->
   <link name="world"/>
 
   <joint name="world_fixed_joint" type="fixed">
     <parent link="world"/>
-    <child link="base_link-v1"/>
+    <child link="base_link"/>
     <origin xyz="0 0 0.15" rpy="0 0 0"/>
   </joint>
 
-  <!-- 반복되는 Gazebo ros2_control joint 설정 -->
-  <xacro:macro name="gazebo_control_joint"
-               params="joint_name lower upper">
+  <!--
+    Gazebo용 ros2_control joint interface.
+    Joint 이름과 position limit은 canonical final HW URDF와 일치해야 한다.
+  -->
+  <xacro:macro
+    name="gazebo_control_joint"
+    params="joint_name lower upper">
 
     <joint name="${joint_name}">
       <command_interface name="position">
@@ -35,77 +46,82 @@
 
   </xacro:macro>
 
-  <!-- Gazebo 관절과 ros2_control을 연결하는 Hardware System -->
-  <ros2_control name="GazeboSimSystem" type="system">
+  <ros2_control
+    name="GazeboSimSystem"
+    type="system">
 
     <hardware>
       <plugin>gz_ros2_control/GazeboSimSystem</plugin>
     </hardware>
 
-    <!-- 왼팔 -->
+    <!-- Left arm -->
+
     <xacro:gazebo_control_joint
-      joint_name="base_link-v1_linkL1"
+      joint_name="left_joint1"
+      lower="-0.523599"
+      upper="1.570796"/>
+
+    <xacro:gazebo_control_joint
+      joint_name="left_joint2"
       lower="-1.570796"
       upper="1.570796"/>
 
     <xacro:gazebo_control_joint
-      joint_name="link_L_1-v1_linkL2"
-      lower="-1.745329"
-      upper="1.745329"/>
-
-    <xacro:gazebo_control_joint
-      joint_name="link_L_2-v1_linkL3"
+      joint_name="left_joint3"
       lower="-1.570796"
       upper="1.570796"/>
 
     <xacro:gazebo_control_joint
-      joint_name="link_L_3-v1_linkL4"
+      joint_name="left_joint4"
       lower="-1.570796"
       upper="1.570796"/>
 
     <xacro:gazebo_control_joint
-      joint_name="link_L_4-v1_linkL5"
+      joint_name="left_joint5"
       lower="-1.570796"
       upper="1.570796"/>
 
-    <!-- 오른팔 -->
+    <!-- Right arm -->
+
     <xacro:gazebo_control_joint
-      joint_name="base_link-v1_linkR1"
+      joint_name="right_joint1"
       lower="-1.570796"
-      upper="1.570796"/>
+      upper="0.523599"/>
 
     <xacro:gazebo_control_joint
-      joint_name="link_R_1-v1_linkR2"
-      lower="-1.745329"
-      upper="1.745329"/>
-
-    <xacro:gazebo_control_joint
-      joint_name="link_R_2-v1_linkR3"
+      joint_name="right_joint2"
       lower="-1.570796"
       upper="1.570796"/>
 
     <xacro:gazebo_control_joint
-      joint_name="link_R_3-v1_linkR4"
+      joint_name="right_joint3"
       lower="-1.570796"
       upper="1.570796"/>
 
     <xacro:gazebo_control_joint
-      joint_name="link_R_4-v1_linkR5"
+      joint_name="right_joint4"
+      lower="-1.570796"
+      upper="1.570796"/>
+
+    <xacro:gazebo_control_joint
+      joint_name="right_joint5"
       lower="-1.570796"
       upper="1.570796"/>
 
   </ros2_control>
 
   <!--
-  위 ros2_control 설정을 읽어 Gazebo 내부에
-  controller_manager를 생성하는 Gazebo System Plugin
+    Gazebo 내부에 ros2_control controller_manager를 생성.
+    Controller configuration은 asow_gazebo/config/ros2_controllers.yaml.
   -->
   <gazebo>
     <plugin
       filename="gz_ros2_control-system"
       name="gz_ros2_control::GazeboSimROS2ControlPlugin">
 
-      <robot_param>robot_description</robot_param>
+      <robot_param>
+        robot_description
+      </robot_param>
 
       <robot_param_node>
         robot_state_publisher
