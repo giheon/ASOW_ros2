@@ -1,9 +1,9 @@
 moveit_setup_assistant_config:
   urdf:
     package: asow_hw_description
-    relative_path: urdf/robot_a.urdf
+    relative_path: urdf/asow_robot.urdf
   srdf:
-    relative_path: config/ROBOT_A.srdf
+    relative_path: config/ASOW.srdf
   package_settings:
     author_name: ASOW
     author_email: ski100000@naver.com

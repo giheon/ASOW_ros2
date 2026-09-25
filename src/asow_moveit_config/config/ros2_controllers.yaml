@@ -17,11 +17,11 @@ controller_manager:
 left_arm_controller:
   ros__parameters:
     joints:
-      - base_link-v1_linkL1
-      - link_L_1-v1_linkL2
-      - link_L_2-v1_linkL3
-      - link_L_3-v1_linkL4
-      - link_L_4-v1_linkL5
+      - left_joint1
+      - left_joint2
+      - left_joint3
+      - left_joint4
+      - left_joint5
 
     command_interfaces:
       - position
@@ -34,11 +34,11 @@ left_arm_controller:
 right_arm_controller:
   ros__parameters:
     joints:
-      - base_link-v1_linkR1
-      - link_R_1-v1_linkR2
-      - link_R_2-v1_linkR3
-      - link_R_3-v1_linkR4
-      - link_R_4-v1_linkR5
+      - right_joint1
+      - right_joint2
+      - right_joint3
+      - right_joint4
+      - right_joint5
 
     command_interfaces:
       - position

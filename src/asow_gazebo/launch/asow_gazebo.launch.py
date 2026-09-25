@@ -83,7 +83,7 @@ def generate_launch_description():
         [
             gazebo_package,
             "urdf",
-            "robot_a_gazebo.urdf.xacro",
+            "asow_gazebo.urdf.xacro",
         ]
     )
 
@@ -148,13 +148,13 @@ def generate_launch_description():
             Node(
                 package="ros_gz_sim",
                 executable="create",
-                name="spawn_robot_a",
+                name="spawn_asow",
                 output="screen",
                 arguments=[
                     "-topic",
                     "robot_description",
                     "-name",
-                    "robot_a",
+                    "asow",
                     "-x",
                     "0.0",
                     "-y",

@@ -4,7 +4,7 @@
   <name>asow_moveit_config</name>
   <version>0.3.0</version>
   <description>
-     An automatically generated package with all the configuration and launch files for using the ROBOT_A with the MoveIt Motion Planning Framework
+     An automatically generated package with all the configuration and launch files for using the ASOW with the MoveIt Motion Planning Framework
   </description>
   <maintainer email="ski100000@naver.com">ASOW</maintainer>
 
@@ -30,6 +30,10 @@
        We don't include them by default to prevent installing gazebo and all its dependencies. -->
   <!-- <exec_depend>joint_trajectory_controller</exec_depend> -->
   <!-- <exec_depend>gazebo_ros_control</exec_depend> -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>rcl_interfaces</exec_depend>
+  <exec_depend>moveit_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>asow_hw_description</exec_depend>
   <exec_depend>controller_manager</exec_depend>
   <exec_depend>moveit_configs_utils</exec_depend>

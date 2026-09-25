@@ -19,7 +19,7 @@ class ComputeIKTest(Node):
 
         self.declare_parameter('group_name', 'left_arm')
         self.declare_parameter('ik_link_name', 'left_tool0')
-        self.declare_parameter('base_frame', 'base_link-v1')
+        self.declare_parameter('base_frame', 'base_link')
         self.declare_parameter('dx', 0.0)
         self.declare_parameter('dy', 0.0)
         self.declare_parameter('dz', 0.0)
@@ -183,11 +183,17 @@ class ComputeIKTest(Node):
         names = response.solution.joint_state.name
         positions = response.solution.joint_state.position
 
+        expected_prefix = (
+            'left_joint'
+            if group_name == 'left_arm'
+            else 'right_joint'
+        )
+
         for name, position in zip(names, positions):
-            if group_name == 'left_arm' and ('_L_' in name or 'linkL' in name):
-                self.get_logger().info(f'  {name}: {position:.6f} rad')
-            elif group_name == 'right_arm' and ('_R_' in name or 'linkR' in name):
-                self.get_logger().info(f'  {name}: {position:.6f} rad')
+            if name.startswith(expected_prefix):
+                self.get_logger().info(
+                    f'  {name}: {position:.6f} rad'
+                )
 
         return 0
 
