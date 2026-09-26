@@ -114,7 +114,8 @@ asow_ws/
 ├── src/
 │   ├── asow_hw_description/
 │   ├── asow_moveit_config/
-│   └── asow_gazebo/
+│   ├── asow_gazebo/
+│   └── asow_dynamixel/
 │
 ├── build/       # colcon 생성, Git 제외
 ├── install/     # colcon 생성, Git 제외
@@ -127,6 +128,7 @@ asow_ws/
 asow_hw_description
 asow_moveit_config
 asow_gazebo
+asow_dynamixel
 ```
 
 ---
